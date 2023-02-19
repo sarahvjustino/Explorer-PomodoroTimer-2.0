@@ -9,8 +9,6 @@ const cardForest = document.querySelector('#forest');
 const cardRain = document.querySelector('#rain');
 const cardStore = document.querySelector('#shop');
 const cardFire = document.querySelector('#fire');
-let timerTimeOut
-let newMinutes
 
 export {
     minutesDisplay,
@@ -24,6 +22,4 @@ export {
     cardForest,
     cardRain,
     cardStore,
-    timerTimeOut,
-    newMinutes
 }

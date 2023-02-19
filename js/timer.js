@@ -1,9 +1,11 @@
 export default function Timer({
     minutesDisplay,
     secondsDisplay,
-    timerTimeOut,
     minutes,
 }) {
+
+    let timerTimeOut
+
     function updateTimerDisplay(minutes, seconds) {
         minutesDisplay.textContent = String(minutes).padStart(2, '0');
         secondsDisplay.textContent = String(seconds).padStart(2, '0');
@@ -34,18 +36,26 @@ export default function Timer({
     }
 
     function resetTimer() {
+        updateTimerDisplay(minutes, 0)
         clearTimeout(timerTimeOut)
-        updateTimerDisplay(minutesDisplay, 0)
     }
 
-    function updateMinutes(newMinutes) {
-        minutes = newMinutes
+    function addTime() {
+        minutesDisplay.textContent = String(minutes += 5).padStart(2, '0');
+    }
+
+    function subtractTime() {
+        if (minutesDisplay.textContent >= 5) {
+            minutesDisplay.textContent = String(minutes -= 5).padStart(2, '0');
+        }
     }
 
     return {
         countdown,
         resetTimer,
-        updateMinutes,
+        updateTimerDisplay,
+        addTime,
+        subtractTime
     }
 }
 
