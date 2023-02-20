@@ -9,6 +9,10 @@ const cardForest = document.querySelector('#forest');
 const cardRain = document.querySelector('#rain');
 const cardStore = document.querySelector('#shop');
 const cardFire = document.querySelector('#fire');
+const lightMode = document.querySelector('.light-mode');
+const darkMode = document.querySelector('.dark-mode');
+const main = document.querySelector('main');
+const body = document.querySelector('body');
 
 export {
     minutesDisplay,
@@ -22,4 +26,8 @@ export {
     cardForest,
     cardRain,
     cardStore,
+    lightMode,
+    darkMode,
+    main,
+    body
 }

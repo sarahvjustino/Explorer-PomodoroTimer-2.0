@@ -32,8 +32,8 @@ export default function Events({
     })
 
     cardForest.addEventListener('click', () => {
-        document.querySelector('.cards .card:nth-child(1)').classList.toggle('active')
-        document.querySelector('.cards .card:nth-child(1) svg').classList.toggle('active')
+        document.querySelector(".cards .card-wrapper:nth-child(1) .card").classList.toggle('active')
+        document.querySelector('.cards .card-wrapper:nth-child(1) .card svg').classList.toggle('active')
         buttons.removeStoreSound()
         buttons.removeRainSound()
         buttons.removeFireSound()
@@ -41,8 +41,8 @@ export default function Events({
     })
 
     cardRain.addEventListener('click', () => {
-        document.querySelector('.cards .card:nth-child(2)').classList.toggle('active')
-        document.querySelector('.cards .card:nth-child(2) svg').classList.toggle('active')
+        document.querySelector('.cards .card-wrapper:nth-child(2) .card').classList.toggle('active')
+        document.querySelector('.cards .card-wrapper:nth-child(2) .card svg').classList.toggle('active')
         buttons.removeForestSound()
         buttons.removeStoreSound()
         buttons.removeFireSound()
@@ -50,8 +50,8 @@ export default function Events({
     })
 
     cardStore.addEventListener('click', () => {
-        document.querySelector('.cards .card:nth-child(3)').classList.toggle('active')
-        document.querySelector('.cards .card:nth-child(3) svg').classList.toggle('active')
+        document.querySelector('.cards .card-wrapper:nth-child(3) .card').classList.toggle('active')
+        document.querySelector('.cards .card-wrapper:nth-child(3) .card svg').classList.toggle('active')
         buttons.removeFireSound()
         buttons.removeForestSound()
         buttons.removeRainSound()
@@ -59,8 +59,8 @@ export default function Events({
     })
 
     cardFire.addEventListener('click', () => {
-        document.querySelector('.cards .card:nth-child(4)').classList.toggle('active')
-        document.querySelector('.cards .card:nth-child(4) svg').classList.toggle('active')
+        document.querySelector('.cards .card-wrapper:nth-child(4) .card').classList.toggle('active')
+        document.querySelector('.cards .card-wrapper:nth-child(4) .card svg').classList.toggle('active')
         buttons.removeForestSound()
         buttons.removeRainSound()
         buttons.removeStoreSound()

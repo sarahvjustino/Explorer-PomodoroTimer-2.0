@@ -8,6 +8,10 @@ export default function Sounds({
     const fireSound = new Audio('assets/sounds/Lareira.wav');
     const coffeShopSound = new Audio('assets/sounds/Cafeteria.wav');
     const rainSound = new Audio('assets/sounds/Chuva.wav');
+    const forestVolumeControl = document.querySelector('.volume-control');
+    const rainVolumeControl = document.querySelector('.card-wrapper:nth-child(2) .volume-control');
+    const shopVolumeControl = document.querySelector('.card-wrapper:nth-child(3) .volume-control');
+    const fireVolumeControl = document.querySelector('.card-wrapper:nth-child(4) .volume-control');
 
     function playForest() {
         if (cardForest.classList.contains('active')) {
@@ -52,6 +56,26 @@ export default function Sounds({
         }
 
     }
+
+
+
+    forestVolumeControl.addEventListener('change', function () {
+        forestSound.volume = this.value
+    })
+
+    rainVolumeControl.addEventListener('change', function () {
+        rainSound.volume = this.value
+    })
+
+    shopVolumeControl.addEventListener('change', function () {
+        coffeShopSound.volume = this.value
+    })
+
+    fireVolumeControl.addEventListener('change', function () {
+        fireSound.volume = this.value
+    })
+
+
 
     return {
         playFire,
