@@ -79,6 +79,10 @@ main {
     cursor: pointer;
 }
 
+.timer button:active {
+    transform: scale(0.96);
+}
+
 .cards {
     display: grid;
     grid-auto-columns: 1fr;
@@ -118,6 +122,22 @@ main {
 
 .card.active {
     background-color: var(--bg-card-active);
+}
+
+#forest.active {
+    background-color: #88e525;
+}
+
+#fire.active {
+    background-color: #da5a2b;
+}
+
+#rain.active {
+    background-color: #1bb8a8;
+}
+
+#shop.active {
+    background-color: #b24e92;
 }
 
 svg.active path {

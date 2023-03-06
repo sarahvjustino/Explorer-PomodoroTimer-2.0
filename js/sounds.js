@@ -16,6 +16,7 @@ export default function Sounds({
     function playForest() {
         if (cardForest.classList.contains('active')) {
             forestSound.play()
+            forestSound.loop = true;
             fireSound.pause()
             coffeShopSound.pause()
             rainSound.pause()
@@ -26,6 +27,7 @@ export default function Sounds({
     function playFire() {
         if (cardFire.classList.contains('active')) {
             fireSound.play()
+            fireSound.loop = true;
             forestSound.pause()
             coffeShopSound.pause()
             rainSound.pause()
@@ -37,6 +39,7 @@ export default function Sounds({
     function playShop() {
         if (cardStore.classList.contains('active')) {
             coffeShopSound.play()
+            coffeShopSound.loop = true;
             fireSound.pause()
             forestSound.pause()
             rainSound.pause()
@@ -48,6 +51,7 @@ export default function Sounds({
     function playRain() {
         if (cardRain.classList.contains('active')) {
             rainSound.play()
+            rainSound.loop = true;
             fireSound.pause()
             coffeShopSound.pause()
             forestSound.pause()
